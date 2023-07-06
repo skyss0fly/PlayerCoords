@@ -34,8 +34,6 @@ public function onCommand(CommandSender $sender, Command $command, string $label
                 $sender->sendMessage($x . $y. $z);
 
                 return true;
-            default:
-                throw new \AssertionError("This line will never be executed");
         }
     }
 
