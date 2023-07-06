@@ -28,5 +28,6 @@ class Main extends PluginBase implements Listener {
         $z = $sender->getPosition()->getX();
              $sender->sendMessage($x . $y . $z);
                     }
+        return bool;
 }
 }
