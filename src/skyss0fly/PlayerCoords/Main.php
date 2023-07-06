@@ -23,7 +23,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
         }
         $x = $sender->getPosition()->getX();
         $y = $sender->getPosition()->getY();
-        $z = $sender->getPosition()->getX();
+        $z = $sender->getPosition()->getZ();
 
         switch($command->getName()){
             case "coords":
