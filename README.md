@@ -15,3 +15,5 @@ Simple on the fly  coordinates message.
 - 5.X.X
 
  # thanks to the following for helping me construct this plugin:
+Amit
+mmm545
