@@ -18,18 +18,21 @@ class Main extends PluginBase implements Listener {
 
   
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-        $coordsx = $sender->getPosition()->getX();
-        $coordsy = $sender->getPosition()->getY();
-$coordsz = $sender->getPosition()->getX();
-		switch($command->getName()){
-			case "coords":
-				$sender->sendMessage($coordsx . $coordsy . $coordsz);
 
-				return true;
-			default:
-				throw new \AssertionError("This line will never be executed");
-		}
-	}
+if($sender instanceof Player)
+
+$x = $sender->getPosition()->getX();
+$y = $sender->getPosition()->getY();
+$z = $sender->getPosition()->getX();
+
+      
+        switch($command->getName()){
+            case "coords":
+                $sender->sendMessage($coords);
+
+                return true;
+            default:
+                throw new \AssertionError("This line will never be executed");
+        }
+    }
 }
-
-
