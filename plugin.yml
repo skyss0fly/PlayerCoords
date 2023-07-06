@@ -4,3 +4,6 @@ version: 1.0
 api: 5.0.0
 author: skyss0fly
 description: A simple coordinates plugin
+permissions:
+  coords.use:
+    default: op
