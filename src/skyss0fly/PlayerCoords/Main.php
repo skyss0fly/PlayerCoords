@@ -17,22 +17,26 @@ class Main extends PluginBase implements Listener {
     }
 
   
-    public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
+  
 
-if($sender instanceof Player)
+    
+public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
+        if(!$sender instanceof Player){
+            $sender->sendMessage("Please Use this command in game!");
+            return false;
+        }
+        $x = $sender->getPosition()->getX();
+        $y = $sender->getPosition()->getY();
+        $z = $sender->getPosition()->getX();
 
-$x = $sender->getPosition()->getX();
-$y = $sender->getPosition()->getY();
-$z = $sender->getPosition()->getX();
-
-      
         switch($command->getName()){
             case "coords":
-                $sender->sendMessage($x . $y . $z);
+                $sender->sendMessage($x . $y. $z);
 
                 return true;
             default:
                 throw new \AssertionError("This line will never be executed");
         }
     }
+
 }
