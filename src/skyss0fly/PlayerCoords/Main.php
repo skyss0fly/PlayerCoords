@@ -29,3 +29,4 @@ class Main extends PluginBase implements Listener {
              $sender->sendMessage($x . $y . $z);
                     }
 }
+}
