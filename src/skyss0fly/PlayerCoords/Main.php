@@ -28,7 +28,7 @@ $z = $sender->getPosition()->getX();
       
         switch($command->getName()){
             case "coords":
-                $sender->sendMessage($coords);
+                $sender->sendMessage($x . $y . $z);
 
                 return true;
             default:
