@@ -5,4 +5,5 @@ branches:
 projects:
   PlayerCoords:
     path: ""
+    icon: "icon.png"
 ...
