@@ -15,7 +15,7 @@ class Main extends PluginBase implements Listener {
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
-    public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
+    public function onCommand(CommandSender $sender, Command $command, string $label, array $args): string{
         switch (strtolower($command->getName())) {
             case "coordinates":
             case "coords":
@@ -28,6 +28,6 @@ class Main extends PluginBase implements Listener {
         $z = $sender->getPosition()->getX();
              $sender->sendMessage($x . $y . $z);
                     }
-        return bool;
+    
 }
 }
