@@ -6,4 +6,8 @@ author: skyss0fly
 description: A simple coordinates plugin
 permissions:
   coords.use:
-    default: op
+    default: false
+commands:
+coords:
+description: use this to display your commands
+default: false
