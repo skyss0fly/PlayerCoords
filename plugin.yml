@@ -6,7 +6,7 @@ author: skyss0fly
 description: A simple coordinates plugin
 permissions:
   coords.use:
-    default: false
+    default: op
 commands:
   coords:
     description: use this to display your coords
