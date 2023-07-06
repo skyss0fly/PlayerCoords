@@ -18,10 +18,12 @@ class Main extends PluginBase implements Listener {
 
   
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-        $coords = $sender->getPosition();
+        $coordsx = $sender->getPosition()->getX();
+        $coordsy = $sender->getPosition()->getY();
+$coordsz = $sender->getPosition()->getX();
 		switch($command->getName()){
 			case "coords":
-				$sender->sendMessage($coords);
+				$sender->sendMessage($coordsx . $coordsy . $coordsz);
 
 				return true;
 			default:
