@@ -15,8 +15,8 @@ class Main extends PluginBase implements Listener {
 
     public function onPlayerJoin(PlayerJoinEvent $event) {
         $player = $event->getPlayer();
-        $coords = $player->getCoordinates()
-        $message
+        $coords = $player->getCoordinates();
+        $message = $coords;
         $player->()->sendMessage($message);
     }
 }
