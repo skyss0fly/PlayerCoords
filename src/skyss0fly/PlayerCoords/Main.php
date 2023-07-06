@@ -22,7 +22,7 @@ class Main extends PluginBase implements Listener {
 		$this->setPermission("PlayerCoords.use");
 		$this->plugin = $plugin;
 	}
-use this construct
+
 
 
 
