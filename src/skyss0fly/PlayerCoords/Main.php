@@ -6,6 +6,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\player\Player;
 
 class Main extends PluginBase implements Listener {
 
@@ -19,7 +20,7 @@ class Main extends PluginBase implements Listener {
         $coords = $sender->getCoordinates();
 		switch($command->getName()){
 			case "coords":
-				$sender->sendMessage($cords);
+				$sender->sendMessage($coords);
 
 				return true;
 			default:
