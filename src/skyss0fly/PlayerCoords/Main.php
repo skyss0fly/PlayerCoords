@@ -13,10 +13,16 @@ class Main extends PluginBase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
-    public function onPlayerJoin(PlayerJoinEvent $event) {
-        $player = $event->getPlayer();
+  
+    public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
         $coords = $player->getCoordinates();
-        $message = $coords;
-        $player->()->sendMessage($message);
-    }
+		switch($command->getName()){
+			case "coords":
+				$sender->sendMessage($cords);
+
+				return true;
+			default:
+				throw new \AssertionError("This line will never be executed");
+		}
+	}
 }
