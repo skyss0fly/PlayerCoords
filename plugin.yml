@@ -1,6 +1,6 @@
-name: WelcomeMessage
-main: skyss0fly\welcomemessage\Main
-version: 1.7
+name: PlayerCoords
+main: skyss0fly\PlayerCoords\Main
+version: 1.0
 api: 5.0.0
-author: ["skyss0fly", "Inaayat"]
+author: skyss0fly
 description: A simple welcome message plugin thats customizable
