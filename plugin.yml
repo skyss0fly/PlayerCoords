@@ -3,4 +3,4 @@ main: skyss0fly\PlayerCoords\Main
 version: 1.0
 api: 5.0.0
 author: skyss0fly
-description: A simple welcome message plugin thats customizable
+description: A simple coordinates plugin
