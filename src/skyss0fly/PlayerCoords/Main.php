@@ -16,7 +16,7 @@ class Main extends PluginBase implements Listener {
 
   
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-        $coords = $player->getCoordinates();
+        $coords = $sender->getCoordinates();
 		switch($command->getName()){
 			case "coords":
 				$sender->sendMessage($cords);
