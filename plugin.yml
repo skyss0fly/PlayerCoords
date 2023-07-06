@@ -9,5 +9,5 @@ permissions:
     default: false
 commands:
 coords:
-description: use this to display your commands
+description: use this to display your coordinates
 default: false
