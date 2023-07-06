@@ -7,6 +7,7 @@ use pocketmine\event\Listener;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
+use pocketmine\world\Position;
 
 class Main extends PluginBase implements Listener {
 
