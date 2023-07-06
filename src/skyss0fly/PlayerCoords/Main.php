@@ -9,20 +9,6 @@ use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use pocketmine\world\Position;
 
-class Main extends PluginBase implements Listener {
-
-    public function onEnable(): void {
-        $this->saveDefaultConfig();
-        $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    }
-	/** @var Loader $plugin */
-	protected $plugin;
-    public function __construct(Main $plugin) {
-		parent::__construct("coord", "Use this to get your coordinates", null, []);
-		$this->setPermission("PlayerCoords.use");
-		$this->plugin = $plugin;
-	}
-
 
 
 
