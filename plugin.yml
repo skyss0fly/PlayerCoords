@@ -8,6 +8,6 @@ permissions:
   coords.use:
     default: false
 commands:
-coords:
-description: use this to display your coordinates
-default: false
+  coords:
+    description: use this to display your coords
+    default: false
