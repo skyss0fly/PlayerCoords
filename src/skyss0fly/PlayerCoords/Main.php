@@ -27,7 +27,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
 
         switch($command->getName()){
             case "coords":
-                $sender->sendMessage($x . $y. $z);
+                $sender->sendMessage("Coordinates:" . $x . "," . "," . $y . "," . $z);
 
                 return true;
             default:
