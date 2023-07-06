@@ -16,7 +16,12 @@ class Main extends PluginBase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
-    
+    public function __construct(Main $plugin) {
+		parent::__construct("coord", "Use this to get your coordinates", null, []);
+		$this->setPermission("PlayerCoords.use");
+		$this->plugin = $plugin;
+	}
+use this construct
 
 
 
