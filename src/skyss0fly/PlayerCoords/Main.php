@@ -35,14 +35,46 @@ public function onCommand(CommandSender $sender, Command $command, string $label
         
         switch($command->getName()){
             case "coords":
-              if ($color = true):
+              if ($color = true){
                 $sender->sendMessage("Coordinates: " . "X: " .$xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
                
                 return true;
-            else
+              }
+            else {
               $sender->sendMessage("Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
+            default:
+                throw new \AssertionError("This line will never be executed");
+        }
+}
+    public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
+        if(!$sender instanceof Player){
+            $sender->sendMessage("Please Use this command in game!");
+            return false;
+        }
+     
+        switch($command->getName()){
+            case "coordsadmin":
+        $sender->sendMessage("§l§e+§d[§aCoords§cAdmin§d]§e+§r: §l§fWhat would you like to work on today?);
+                return true;
+            
+            default:
+                throw new \AssertionError("This line will never be executed");
+        }
+    }
+public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
+        if(!$sender instanceof Player){
+            $sender->sendMessage("Please Use this command in game!");
+            return false;
+        }
+     
+        switch($command->getName()){
+            case "colormode":
+        $sender->sendMessage("§l§e+§d[§aCoords§cAdmin§d]§e+§r: §l§fColorMode: Please select a Color! §cusage: /colormode &c");
+                return true;
+            
             default:
                 throw new \AssertionError("This line will never be executed");
         }
     }
 }
+
