@@ -39,6 +39,8 @@ public function onCommand(CommandSender $sender, Command $command, string $label
                 $sender->sendMessage("Coordinates: " . "X: " .$xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
                
                 return true;
+            else
+              $sender->sendMessage("Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
             default:
                 throw new \AssertionError("This line will never be executed");
         }
