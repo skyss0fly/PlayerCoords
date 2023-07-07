@@ -69,9 +69,16 @@ public function onCommand(CommandSender $sender, Command $command, string $label
      
         switch($command->getName()){
             case "colormode":
-        $sender->sendMessage("§l§e+§d[§aCoords§cAdmin§d]§e+§r: §l§fColorMode: Please select a Color! §cusage: /colormode &c");
+            $colormode = $this->getConfig("ColorMode");
+            if ($colormode === false){
+        $sender->sendMessage("§l§e+§d[§aCoords§cAdmin§d]§e+§r: §l§fColorMode: Enabled");
+        $colormode->file_put_contents("true");
                 return true;
-            
+            }
+            else {
+            $sender->sendMessage("§l§e+§d[§aCoords§cAdmin§d]§e+§r: §l§fColorMode: Disabled");
+        $colormode->file_put_contents("false");
+        }
             default:
                 throw new \AssertionError("This line will never be executed");
         }
