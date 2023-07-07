@@ -33,7 +33,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
    $zcolor = str_replace("&", "§", $zcolorraw);
   $r = "§r"
         
-        if($command->getName()){
+        switch($command->getName()){
             case "coords":
               if ($color = true):
                 $sender->sendMessage("Coordinates: " . "X: " .$xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
