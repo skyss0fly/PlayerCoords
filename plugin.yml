@@ -1,7 +1,7 @@
 name: PlayerCoords
 main: skyss0fly\PlayerCoords\Main
 version: 1.0
-api: 5.0.0
+api: 4.0.0
 author: skyss0fly
 description: A simple coordinates plugin
 permissions:
