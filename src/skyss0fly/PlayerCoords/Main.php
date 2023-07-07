@@ -24,14 +24,27 @@ public function onCommand(CommandSender $sender, Command $command, string $label
         $x = $sender->getPosition()->getX();
         $y = $sender->getPosition()->getY();
         $z = $sender->getPosition()->getZ();
-
+        $color = $this->getConfig("ColorMode");
+        $xcolorraw = $this->getConfig("X");
+  $xcolor = str_replace("&", "§", $xcolorraw);
+        $ycolorraw = $this->getConfig("Y");
+   $ycolor = str_replace("&", "§", $ycolorraw);
+        $zcolorraw = $this->getConfig("Z");
+   $zcolor = str_replace("&", "§", $zcolorraw);
+  $r = "§r";
+        
         switch($command->getName()){
             case "coords":
-                $sender->sendMessage("Coordinates: " . "X: " . $x . ", " . "Y: " . $y . ", " . "Z: " . $z);
-
+           if ($color){
+                $sender->sendMessage("Coordinates: " . "X: " .$xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
+               
                 return true;
+              }
+            else {
+              $sender->sendMessage("Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
             default:
                 throw new \AssertionError("This line will never be executed");
+        
         }
-    }
+}
 }

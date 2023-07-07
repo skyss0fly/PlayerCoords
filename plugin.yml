@@ -12,3 +12,4 @@ commands:
     description: use this to display your coords
     permission: coords.use
     default: false
+  
