@@ -35,7 +35,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
         
         switch($command->getName()){
             case "coords":
-              if ($color = true){
+              if ($color === true){
                 $sender->sendMessage("Coordinates: " . "X: " .$xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
                
                 return true;
@@ -61,6 +61,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
                 throw new \AssertionError("This line will never be executed");
         }
     }
+    
 public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
         if(!$sender instanceof Player){
             $sender->sendMessage("Please Use this command in game!");
