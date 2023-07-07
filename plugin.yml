@@ -16,3 +16,7 @@ commands:
     description: [Admin] use this to setup the config part of the plugin
     permissions: coords.admin
     default: false
+  colormode:
+    description: [Admin] Setup color Mode!
+    permission: coords.admin
+    default.false
