@@ -35,7 +35,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
         
         switch($command->getName()){
             case "coords":
-              if ($color === true){
+           if ($color){
                 $sender->sendMessage("Coordinates: " . "X: " .$xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
                
                 return true;
