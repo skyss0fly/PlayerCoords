@@ -12,11 +12,4 @@ commands:
     description: use this to display your coords
     permission: coords.use
     default: false
-  coordsadmin:
-    description: [Admin] use this to setup the config part of the plugin
-    permissions: coords.admin
-    default: false
-  colormode:
-    description: [Admin] Setup color Mode!
-    permission: coords.admin
-    default.false
+  
