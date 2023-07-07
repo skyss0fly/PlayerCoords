@@ -31,7 +31,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
    $ycolor = str_replace("&", "§", $ycolorraw);
         $zcolorraw = $this->getConfig("Z");
    $zcolor = str_replace("&", "§", $zcolorraw);
-  $r = "§r"
+  $r = "§r";
         
         switch($command->getName()){
             case "coords":
