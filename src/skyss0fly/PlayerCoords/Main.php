@@ -44,32 +44,8 @@ public function onCommand(CommandSender $sender, Command $command, string $label
               $sender->sendMessage("Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
             default:
                 throw new \AssertionError("This line will never be executed");
-        }
-}
-    public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-        if(!$sender instanceof Player){
-            $sender->sendMessage("Please Use this command in game!");
-            return false;
-        }
-     
-        switch($command->getName()){
-            case "coordsadmin":
-        $sender->sendMessage("§l§e+§d[§aCoords§cAdmin§d]§e+§r: §l§fWhat would you like to work on today?);
-                return true;
-            
-            default:
-                throw new \AssertionError("This line will never be executed");
-        }
-    }
-    
-public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-        if(!$sender instanceof Player){
-            $sender->sendMessage("Please Use this command in game!");
-            return false;
-        }
-     
-        switch($command->getName()){
-            case "colormode":
+        
+          case "colormode":
             $colormode = $this->getConfig("ColorMode");
             if ($colormode === false){
         $sender->sendMessage("§l§e+§d[§aCoords§cAdmin§d]§e+§r: §l§fColorMode: Enabled");
@@ -79,10 +55,14 @@ public function onCommand(CommandSender $sender, Command $command, string $label
             else {
             $sender->sendMessage("§l§e+§d[§aCoords§cAdmin§d]§e+§r: §l§fColorMode: Disabled");
         $colormode->file_put_contents("false");
-        }
-            default:
-                throw new \AssertionError("This line will never be executed");
-        }
-    }
-}
-
+            }
+             case "coordsadmin":
+        $sender->sendMessage("§l§e+§d[§aCoords§cAdmin§d]§e+§r: §l§fWhat would you like to work on today?);
+                return true;
+            }
+            }
+            }
+            }
+            }
+            }
+        
