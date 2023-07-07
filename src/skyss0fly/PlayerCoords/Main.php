@@ -26,11 +26,11 @@ public function onCommand(CommandSender $sender, Command $command, string $label
         $z = $sender->getPosition()->getZ();
         $color = $this->getConfig("ColorMode");
         $xcolorraw = $this->getConfig("X");
-  $xcolor = str_replace("&", "§", $xcolor);
+  $xcolor = str_replace("&", "§", $xcolorraw);
         $ycolorraw = $this->getConfig("Y");
-   $ycolor = str_replace("&", "§", $ycolor);
+   $ycolor = str_replace("&", "§", $ycolorraw);
         $zcolorraw = $this->getConfig("Z");
-   $zcolor = str_replace("&", "§", $zcolor);
+   $zcolor = str_replace("&", "§", $zcolorraw);
   $r = "§r"
         
         if($command->getName()){
