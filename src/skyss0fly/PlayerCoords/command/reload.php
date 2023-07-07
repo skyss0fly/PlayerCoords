@@ -17,6 +17,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
             case "reloadcoords":
          
                 $this->getServer()->broadcastMessage("§l§e+§d[§fPlayerCoords§d]§e+ §r§eSuccessfully reloaded!);
+                $this->reloadPlugin();
                 return true;
             default:
                 throw new \AssertionError("This line will never be executed");
