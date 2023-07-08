@@ -12,15 +12,15 @@ class Main extends PluginBase implements Listener {
   public function onEnable(): void {
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    $this->getLogger()->info("§l§e+§d[§fPlayerCoods§d]§e+ §r§esuccessfully loaded and enabled, have a good day!);
+    $this->getLogger()->info("§l§e+§d[§fPlayerCoords§d]§e+ §r§esuccessfully loaded and enabled, have a good day!);
     }
 
 
 
 public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
         if(!$sender instanceof Player){
-        $message = ["Please use this command in game"]();
-            $sender->sendMessage($message);
+         $sender->sendMessage("Please use this command in game");
+               
             return false;
         }
         $x = $sender->getPosition()->getX();
