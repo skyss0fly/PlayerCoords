@@ -18,8 +18,8 @@ class Main extends PluginBase implements Listener {
 
 
 public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-        if(!$sender instanceof Player){
-           $sender->sendMessage("Please Use this command in game!");
+         if(!$sender instanceof Player){
+            $sender->sendMessage("Please Use this command in game!");
             return false;
         }
         $x = $sender->getPosition()->getX();
