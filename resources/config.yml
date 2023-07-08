@@ -1,8 +1,8 @@
 ColorMode: True
 
- X: "&a"
- Y: "&e"
- Z: "&b"
+X: "&a"
+Y: "&e"
+Z: "&b"
 
 # List of All Color Values:
 # &a - Bright Green, &1 Dark Green, &3 Turquoise Green, &2 dark blue, &b bright blue, &9 aqua blue, &c light red, &4 Dark Red, &6 bright orange, &g fold, &e yellow, &7 light gray, &8 dark gray, &0 black
