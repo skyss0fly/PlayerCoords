@@ -12,7 +12,7 @@ class Main extends PluginBase implements Listener {
   public function onEnable(): void {
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    $this->getLogger()->info("§l§e+§d[§fPlayerCoords§d]§e+ §r§esuccessfully loaded and enabled, have a good day!);
+    $this->getLogger()->info("§l§e+§d[§fPlayerCoords§d]§e+ §r§esuccessfully loaded and enabled, have a good day!");
     }
 
 
