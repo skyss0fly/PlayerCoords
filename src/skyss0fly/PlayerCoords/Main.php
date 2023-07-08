@@ -43,6 +43,8 @@ class Main extends PluginBase implements Listener {
                     $sender->sendMessage("Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
                 }
                 return true;
+            default:
+                throw new \AssertionError("This line will never be executed");
         }
         return false;
     }
