@@ -26,12 +26,12 @@ class Main extends PluginBase implements Listener {
         $x = $sender->getPosition()->getX();
         $y = $sender->getPosition()->getY();
         $z = $sender->getPosition()->getZ();
-        $color = $this->getConfig("ColorMode");
-        $xcolorraw = $this->getConfig("X");
+        $color = $this->getConfig()->get("ColorMode");
+        $xcolorraw = $this->getConfig()->get("X");
   $xcolor = str_replace("&", "§", $xcolorraw);
-        $ycolorraw = $this->getConfig("Y");
+        $ycolorraw = $this->getConfig()->get("Y");
    $ycolor = str_replace("&", "§", $ycolorraw);
-        $zcolorraw = $this->getConfig("Z");
+        $zcolorraw = $this->getConfig()->get("Z");
    $zcolor = str_replace("&", "§", $zcolorraw);
   $r = "§r";
         
