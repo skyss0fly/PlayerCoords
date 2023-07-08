@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener {
 
 
 
- function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
+ public function onCommand(CommandSender $sender, Command $command, string $label, array $args); bool{
         if(!$sender instanceof Player){
          $this->getLogger()->info("Please use this command in game");
                
