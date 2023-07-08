@@ -8,8 +8,8 @@ Simple on the fly  coordinates message.
 <p><b>Instructions:</b></p>
 <p><b> - 1</b> join the game and do /coords </p><p></p>
 <p><b>Permissions:</b></p>
-> coords.use
-### TODO
+> coords.use <br>
+<h3>TODO </h3><br>
 - None, You should suggest some!
 
 ## API COMPATIBLE:
