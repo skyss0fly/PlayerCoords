@@ -20,10 +20,10 @@ public function onCommand(CommandSender $sender, Command $command, string $label
                $colormode = $this->getConfig()->get("ColorMode");
          if ($colormode){
 $sender->sendMessage("ColorMode Disabled");
-            file_put_contents($colormode,"False");
+      $this->getConfig->set("ColorMode", False);
          }
          $sender->sendMessage("ColorMode Enabled");
-     file_put_contents($colormode,"True");
+     $this->getConfig->set("ColorMode", True);
         return false;
 }
 }
