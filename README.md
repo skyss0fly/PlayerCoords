@@ -7,6 +7,7 @@ Simple on the fly  coordinates message.
 
 <p><b>Instructions:</b></p>
 <p><b> - 1</b> join the game and do /coords </p><p></p>
+to change the color of your xyz, go to config.yml in plugin_data
 <p><b>Permissions:</b></p>
 > coords.use <br>
 <h3>TODO </h3><br>
