@@ -17,5 +17,5 @@ Simple on the fly  coordinates message.
 
  # thanks to the following for helping me construct this plugin:
 - Amit
-- mmm545l
+- mmm545
 - inaayat (always coming in with the clutch tysm)
