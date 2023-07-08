@@ -18,7 +18,7 @@ class Main extends PluginBase implements Listener {
 
 
 public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-         if(!$sender instanceof Player){
+        if(!$sender instanceof Player){
             $sender->sendMessage("Please Use this command in game!");
             return false;
         }
@@ -45,7 +45,8 @@ public function onCommand(CommandSender $sender, Command $command, string $label
               $sender->sendMessage("Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
             default:
                 throw new \AssertionError("This line will never be executed");
-        
-        }
-}
-}
+       }
+       }
+       }
+       }
+ 
