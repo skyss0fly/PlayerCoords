@@ -10,6 +10,6 @@ permissions:
 commands:
   coords:
     description: use this to display your coords
-    permission: coords.use
+    permission: PlayerCoords.use
     default: false
   
