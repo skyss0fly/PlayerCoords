@@ -22,4 +22,4 @@ to change the color of your xyz, go to config.yml in plugin_data
 - mmm545
 - inaayat (always coming in with the clutch tysm)
 
-Thank you for visiting this page
+# Thank you for visiting this page i appreciate it
