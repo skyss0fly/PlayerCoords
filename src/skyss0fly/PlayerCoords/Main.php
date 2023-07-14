@@ -46,6 +46,5 @@ class Main extends PluginBase implements Listener {
             default:
                 throw new \AssertionError("This line will never be executed");
         }
-        return false;
     }
 }
