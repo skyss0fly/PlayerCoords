@@ -5,7 +5,7 @@ api: 5.0.0
 author: skyss0fly
 description: A simple coordinates plugin
 permissions:
-  coords.use:
+  PlayerCoords.use:
     default: op
 commands:
   coords:
