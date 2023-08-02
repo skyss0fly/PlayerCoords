@@ -51,7 +51,7 @@ $sender->sendMessage("You are not In-Game!");
                 
             }
             else
-                if ($player->hasPermission("PlayerCoords.bccoords") {
+                if ($player->hasPermission("PlayerCoords.bccoords")) {
    if ($color) {
                     $server->broadcastMessage($sender . "Is broadcasting: Coordinates: " . "X: " . $xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
                 }
@@ -62,4 +62,6 @@ $sender->sendMessage("You are not In-Game!");
                     $sender->sendMessage("Hey! you dont have permission!");
                     }
                     }
+}
+    }
 }
