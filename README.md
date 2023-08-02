@@ -20,7 +20,7 @@ to change the color of your xyz, go to config.yml in plugin_data
 
  # thanks to the following for helping me construct this plugin:
 - Amit
-- mmm545
+- mmm454
 - inaayat (always coming in with the clutch tysm)
 
 # Thank you for visiting this page i appreciate it
