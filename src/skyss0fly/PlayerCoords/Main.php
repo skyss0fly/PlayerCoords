@@ -48,15 +48,15 @@ class Main extends PluginBase implements Listener {
                 throw new \AssertionError("This line will never be executed");
             case "bccoords":
             
-                if ($sender->hasPermission("PlayerCoords.bccoords")) {
-   if ($color) {
+                
+   if ($sender->hasPermission("PlayerCoords.bccoords" && $color === true)) {
           $server = $this->getServer(); 
        
        $server->broadcastMessage($sender . "Is broadcasting: Coordinates: " . "X: " . $xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
        return true;
                 }
     
-   if ($color !== true) {
+   if ($color !== true && $sender->hasPermission("PlayerCoords.bccoords") {
          $server = $this->getServer();
                     $server->broadcastMessage($sender . "Is broadcasting: Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
                     return true;
