@@ -54,7 +54,7 @@ class Main extends PluginBase implements Listener {
        return true;
                 }
        
-        else {
+   elseif (!$color) {
                     $server->broadcastMessage($sender . "Is broadcasting: Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
                     return true;
                 }
