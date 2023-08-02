@@ -56,7 +56,7 @@ class Main extends PluginBase implements Listener {
        return true;
                 }
     
-   if ($color !== true && $sender->hasPermission("PlayerCoords.bccoords") {
+   if ($color !== true && $sender->hasPermission("PlayerCoords.bccoords")) {
          $server = $this->getServer();
                     $server->broadcastMessage($sender . "Is broadcasting: Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
                     return true;
