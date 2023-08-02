@@ -56,11 +56,15 @@ class Main extends PluginBase implements Listener {
        return true;
                 }
        
-   elseif (!$color) {
+   if (!$color) {
          $server = $this->getServer();
                     $server->broadcastMessage($sender . "Is broadcasting: Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
                     return true;
                 }
+   else{
+
+       // nothing
+   }
                     else{
                     $sender->sendMessage("Hey! you dont have permission!");
                         return false;
