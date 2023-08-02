@@ -39,8 +39,10 @@ class Main extends PluginBase implements Listener {
             case "coords":
                 if ($color) {
                     $sender->sendMessage("Coordinates: " . "X: " . $xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
+                    return true;
                 } else {
                     $sender->sendMessage("Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
+                    return true;
                 }
                 return true;
             default:
