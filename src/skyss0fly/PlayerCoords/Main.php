@@ -46,22 +46,23 @@ class Main extends PluginBase implements Listener {
             default:
                 throw new \AssertionError("This line will never be executed");
             case "bccoords":
-            if (!$player instanceof Player) {
-$sender->sendMessage("You are not In-Game!");
-                
-            }
-            else
+            
                 if ($player->hasPermission("PlayerCoords.bccoords")) {
    if ($color) {
-                    $server->broadcastMessage($sender . "Is broadcasting: Coordinates: " . "X: " . $xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
+          $server = $this->getServer();      
+       $server->broadcastMessage($sender . "Is broadcasting: Coordinates: " . "X: " . $xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
+       return true;
                 }
-        elseif (!$color){
+       
+        else (!$color){
                     $server->broadcastMessage($sender . "Is broadcasting: Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
+                    return true;
                 }
                     else{
                     $sender->sendMessage("Hey! you dont have permission!");
+                        return false;
                     }
                     }
 }
     }
-}
+
