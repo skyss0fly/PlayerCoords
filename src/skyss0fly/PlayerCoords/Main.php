@@ -3,17 +3,14 @@
 namespace skyss0fly\PlayerCoords;
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\event\Listener;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
-use pocketmine\world\Position;
 
-class Main extends PluginBase implements Listener {
+class Main extends PluginBase{
+
     public function onEnable(): void {
         $this->saveDefaultConfig();
-        $this->getServer()->getPluginManager()->registerEvents($this, $this);
-     
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
@@ -22,56 +19,40 @@ class Main extends PluginBase implements Listener {
             return false;
         }
 
-        $x = $sender->getPosition()->getX();
-        $y = $sender->getPosition()->getY();
-        $z = $sender->getPosition()->getZ();
-
-        $color = $this->getConfig()->get("ColorMode");
-        $xcolorraw = $this->getConfig()->get("X");
-        $xcolor = str_replace("&", "§", $xcolorraw);
-        $ycolorraw = $this->getConfig()->get("Y");
-        $ycolor = str_replace("&", "§", $ycolorraw);
-        $zcolorraw = $this->getConfig()->get("Z");
-        $zcolor = str_replace("&", "§", $zcolorraw);
-        $r = "§r";
+        $coords = $this->getPlayerCoords($sender);
 
         switch ($command->getName()) {
             case "coords":
-                if ($color) {
-                    $sender->sendMessage("Coordinates: " . "X: " . $xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
-                    return true;
-                } else {
-                    $sender->sendMessage("Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
-                    return true;
-                }
-            default:
-                throw new \AssertionError("This line will never be executed");
-            case "bccoords":
-            
-                
-   if ($sender->hasPermission("PlayerCoords.bccoords") && $color === true) {
-          $server = $this->getServer(); 
-       
-       $server->broadcastMessage($sender . "Is broadcasting: Coordinates: " . "X: " . $xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
-       return true;
-                }
-    
-   if ($color !== true && $sender->hasPermission("PlayerCoords.bccoords")) {
-         $server = $this->getServer();
-                    $server->broadcastMessage($sender . "Is broadcasting: Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
-                    return true;
-                }
-  
+                $sender->sendMessage($coords);
+                return true;
 
-       
-   
-                   else{
-                    $sender->sendMessage("Hey! you dont have permission!");
-                        return false;
-                    }
-                    }
-}
+            case "bccoords":
+                if (!$sender->hasPermission("PlayerCoords.bccoords")) {
+                    $sender->sendMessage("Hey! You don't have permission!");
+                    return false;
+                }
+
+                $broadcastMessage = "$sender is broadcasting: $coords";
+                $this->getServer()->broadcastMessage($broadcastMessage);
+                return true;
+        }
+        return false;
+    }
+    
+    private function getPlayerCoords(Player $player): string {
+        $x = $player->getPosition()->getX();
+        $y = $player->getPosition()->getY();
+        $z = $player->getPosition()->getZ();
+
+        $color = $this->getConfig()->get("ColorMode");
+        $xcolor = $this->getColor($this->getConfig()->get("X"));
+        $ycolor = $this->getColor($this->getConfig()->get("Y"));
+        $zcolor = $this->getColor($this->getConfig()->get("Z"));
+
+        return "Coordinates: X: $xcolor$x§r, Y: $ycolor$y§r, Z: $zcolor$z";
     }
 
-
-
+    private function getColor(string $colorCode): string {
+        return str_replace("&", "§", $colorCode);
+    }
+}
