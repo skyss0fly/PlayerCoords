@@ -49,7 +49,7 @@ class Main extends PluginBase{
         $ycolor = $this->getColor($this->getConfig()->get("Y"));
         $zcolor = $this->getColor($this->getConfig()->get("Z"));
 
-        return "Coordinates: X: $xcolor$x§r, Y: $ycolor$y§r, Z: $zcolor$z";
+        return "Coordinates: X: ${xcolor}${x}§r, Y: ${ycolor}${y}§r, Z: ${zcolor}${z}";
     }
 
     private function getColor(string $colorCode): string {
