@@ -1,8 +1,10 @@
 # PlayerCoords
 Simple on the fly  coordinates message.
 <p align="center">
+<a href="https://poggit.pmmp.io/p/PlayerCoords"><img src="https://poggit.pmmp.io/shield.api/PlayerCoords"></a>
+<a href="https://poggit.pmmp.io/p/PlayerCoords"><img src="https://poggit.pmmp.io/shield.state/PlayerCoords"></a>
 
- 
+
 </p> <p></p>
 
 <p><b>Instructions:</b></p>
