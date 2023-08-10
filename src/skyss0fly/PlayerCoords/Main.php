@@ -52,14 +52,14 @@ class Main extends PluginBase implements Listener {
    if ($sender->hasPermission("PlayerCoords.bccoords") && $color === true) {
           $server = $this->getServer(); 
         $sname = $sender->getName();
-       $server->broadcastMessage($sname . "Is broadcasting: Coordinates: " . "X: " . $xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
+       $server->broadcastMessage($sname . ", is broadcasting: Coordinates: " . "X: " . $xcolor . $x . $r .  ", " . "Y: " . $ycolor . $y . $r . ", " . "Z: " . $zcolor . $z);
        return true;
                 }
     
    if ($color !== true && $sender->hasPermission("PlayerCoords.bccoords")) {
          $server = $this->getServer();
        $sname = $sender->getName();
-                    $server->broadcastMessage($sname . "Is broadcasting: Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
+                    $server->broadcastMessage($sname . ", is broadcasting: Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
                     return true;
                 }
   
