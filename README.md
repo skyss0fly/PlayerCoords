@@ -13,7 +13,8 @@ Simple on the fly  coordinates message.
 <h1>configuration</h1>
 to change the color of your xyz, go to config.yml in plugin_data
 <p><b>Permissions:</b></p>
-> PlayerCoords.use <br>
+<p> PlayerCoords.use </p><br>
+<p> PlayerCoords.bccoords</p>
 <h3>TODO </h3><br>
 - None, You should suggest some!
 
