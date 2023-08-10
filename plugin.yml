@@ -7,7 +7,7 @@ description: A simple coordinates plugin
 permissions:
   PlayerCoords.use:
     default: op
-    PlayerCoords.bccoords:
+  PlayerCoords.bccoords:
     default: op
 commands:
   coords:
@@ -15,6 +15,6 @@ commands:
     permission: PlayerCoords.use
     default: false
   bccoords:
-  description: broadcast your coords:)
-  permission: PlayerCoords.bccoords
-  default: false
+    description: broadcast your coords:)
+    permission: PlayerCoords.bccoords
+    default: false
