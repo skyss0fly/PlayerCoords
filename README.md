@@ -15,6 +15,7 @@ to change the color of your xyz, go to config.yml in plugin_data
 <p><b>Permissions:</b></p>
 <p> PlayerCoords.use </p><br>
 <p> PlayerCoords.bccoords</p>
+<p> PlayerCoords.fcoords </p>
 <h3>TODO </h3><br>
 - None, You should suggest some!
 
