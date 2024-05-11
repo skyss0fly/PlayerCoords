@@ -13,7 +13,6 @@ class Main extends PluginBase implements Listener {
     public function onEnable(): void {
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-     
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
@@ -21,11 +20,12 @@ class Main extends PluginBase implements Listener {
             $this->getLogger()->warning("Please use this command in-game");
             return false;
         }
-
         $x = $sender->getPosition()->getX();
         $y = $sender->getPosition()->getY();
         $z = $sender->getPosition()->getZ();
-
+        $xf = $sender->getPosition()->getFloorX();
+        $yf = $sender->getPosition()->getFloorY();
+        $zf = $sender->getPosition()->getFloorZ();
         $color = $this->getConfig()->get("ColorMode");
         $xcolorraw = $this->getConfig()->get("X");
         $xcolor = str_replace("&", "§", $xcolorraw);
@@ -34,7 +34,6 @@ class Main extends PluginBase implements Listener {
         $zcolorraw = $this->getConfig()->get("Z");
         $zcolor = str_replace("&", "§", $zcolorraw);
         $r = "§r";
-
         switch ($command->getName()) {
             case "coords":
                 if ($color) {
@@ -44,6 +43,16 @@ class Main extends PluginBase implements Listener {
                     $sender->sendMessage("Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
                     return true;
                 }
+        }
+            switch ($command->getName()) {
+            case "fcoords":
+                if ($color) {
+                    $sender->sendMessage("Coordinates: " . "X: " . $xcolor . $xf . $r .  ", " . "Y: " . $ycolor . $yf . $r . ", " . "Z: " . $zcolor . $zf);
+                    return true;
+                } else {
+                    $sender->sendMessage("Coordinates: " . "X: " . $xf . ", " . "Y: "  . $yf . ", " . "Z: " . $zf);
+                    return true;
+                } 
             default:
                 throw new \AssertionError("This line will never be executed");
             case "bccoords":
@@ -62,16 +71,15 @@ class Main extends PluginBase implements Listener {
                     $server->broadcastMessage($sname . ", is broadcasting: Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
                     return true;
                 }
-  
-
-       
-   
                    else{
                     $sender->sendMessage("Hey! you dont have permission!");
                         return false;
                     }
                     }
 }
+    
+    
     }
+
 
 
