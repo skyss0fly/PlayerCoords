@@ -25,6 +25,9 @@ class Main extends PluginBase implements Listener {
         $x = $sender->getPosition()->getX();
         $y = $sender->getPosition()->getY();
         $z = $sender->getPosition()->getZ();
+        $xf = $sender->getPosition()->getFloorX();
+        $yf = $sender->getPosition()->getFloorY();
+        $zf = $sender->getPosition()->getFloorZ();
 
         $color = $this->getConfig()->get("ColorMode");
         $xcolorraw = $this->getConfig()->get("X");
@@ -44,6 +47,15 @@ class Main extends PluginBase implements Listener {
                     $sender->sendMessage("Coordinates: " . "X: " . $x . ", " . "Y: "  . $y . ", " . "Z: " . $z);
                     return true;
                 }
+            switch ($command->getName()) {
+            case "fcoords":
+                if ($color) {
+                    $sender->sendMessage("Coordinates: " . "X: " . $xcolor . $xf . $r .  ", " . "Y: " . $ycolor . $yf . $r . ", " . "Z: " . $zcolor . $zf);
+                    return true;
+                } else {
+                    $sender->sendMessage("Coordinates: " . "X: " . $xf . ", " . "Y: "  . $yf . ", " . "Z: " . $zf);
+                    return true;
+                } 
             default:
                 throw new \AssertionError("This line will never be executed");
             case "bccoords":
