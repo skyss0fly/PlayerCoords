@@ -1,4 +1,6 @@
 # PlayerCoords
+> [!NOTE]
+> This Branch of PlayerCoords is For PocketMine-MP API 6.0.0 (Which has not yet released)
 Simple on the fly  coordinates message.
 <p align="center">
 <a href="https://poggit.pmmp.io/p/PlayerCoords"><img src="https://poggit.pmmp.io/shield.api/PlayerCoords"></a>
@@ -20,7 +22,7 @@ to change the color of your xyz, go to config.yml in plugin_data
 - None, You should suggest some!
 
 ## API COMPATIBLE:
-- 5.X.X
+- 6.X.X
 
  # thanks to the following for helping me construct this plugin:
 - Amit
