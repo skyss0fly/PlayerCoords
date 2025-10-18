@@ -1,26 +1,23 @@
 name: PlayerCoords
 main: skyss0fly\PlayerCoords\Main
-version: 1.3.0
+version: 1.5.0
 api: 6.0.0
 author: skyss0fly
-description: A simple coordinates plugin
-permissions:
-  PlayerCoords.use:
-    default: op
-  PlayerCoords.fcoords:
-   default: op
-  PlayerCoords.bccoords:
-    default: op
+description: Shows your coordinates or broadcasts them.
 commands:
   coords:
-    description: use this to display your coords
-    permission: PlayerCoords.use
-    default: false
+    description: Show your exact coordinates
+    permission: PlayerCoords.coords
   fcoords:
-    description: use this to display your Floor coords
+    description: Show your floored coordinates
     permission: PlayerCoords.fcoords
-    default: false
   bccoords:
-    description: broadcast your coords:)
+    description: Broadcast your coordinates
     permission: PlayerCoords.bccoords
-    default: false
+permissions:
+  PlayerCoords.coords:
+    default: true
+  PlayerCoords.fcoords:
+    default: true
+  PlayerCoords.bccoords:
+    default: op
