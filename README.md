@@ -20,7 +20,7 @@ to change the color of your xyz, go to config.yml in plugin_data
 - None, You should suggest some!
 
 ## API COMPATIBLE:
-- 5.X.X
+- 6.X.X
 
  # thanks to the following for helping me construct this plugin:
 - Amit
